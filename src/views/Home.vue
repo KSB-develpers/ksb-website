@@ -1,18 +1,16 @@
 <template>
-  <div class="home">
-    <img alt="Vue logo" src="../assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js + TypeScript App"/>
-  </div>
+  <q-page class="flex flex-center">
+    <img alt="Quasar logo" src="../assets/logo.png">
+  </q-page>
 </template>
 
-<script lang="ts">
-import { Component, Vue } from 'vue-property-decorator';
-import HelloWorld from '@/components/HelloWorld.vue'; // @ is an alias to /src
+<style>
+</style>
 
-@Component({
-  components: {
-    HelloWorld,
-  },
-})
+<script lang="ts">
+import { Vue, Component } from 'vue-property-decorator';
+
+@Component
+
 export default class Home extends Vue {}
 </script>
