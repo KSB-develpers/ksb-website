@@ -100,7 +100,7 @@
 
 <script lang="ts">
 import { Vue, Component } from 'vue-property-decorator';
-import Quasar from 'quasar';
+
 
 @Component
 
