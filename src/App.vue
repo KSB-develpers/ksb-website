@@ -1,27 +1,31 @@
 <template lang="pug">
 #app
-    q-layout(view="hhh lpR fFf")
+    q-layout(view='hhh lpR fFf')
         Header
-        Hello
-        Hello
-        Hello
-        Hello
+        .main-content
+            .spacer
+        router-view
+
 </template>
 
 <script lang="ts">
 import { Vue, Component } from 'vue-property-decorator';
 import Quasar from 'quasar';
-import Default from '@/layouts/Default.vue';
 import Header from '@/components/Header.vue';
-import Hello from '@/components/HelloWorld.vue';
 
 @Component({
     components: {
-        Default,
         Header,
-        Hello,
     },
 })
 
 export default class App extends Vue {}
 </script>
+
+<style lang="stylus">
+.spacer
+    height 80px
+.main-content
+    max-width 1000px
+    margin 0 auto
+</style>

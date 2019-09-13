@@ -1,7 +1,5 @@
 <template>
-  <q-page padding>
     <p> {{ text }}</p>
-  </q-page>
 </template>
 
 <script lang="ts">

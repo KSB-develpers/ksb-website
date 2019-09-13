@@ -3,15 +3,17 @@
     q-header(reveal :reveal-offset="500")
         .navbar-parent
             .navbar
-                a(href='#')
+                router-link(to='/' tag='a')
                     img(:src="headerLogo")
                 .nav-item
-                    q-btn(flat to='#' size='1.2rem').item-style ホーム
-                    q-btn(flat to='#' size='1.2rem').item-style お知らせ
-                    q-btn(flat to='#' size='1.2rem').item-style 会社概要
-                    q-btn(flat to='#' size='1.2rem').item-style 事業内容
-                    q-btn(flat to='#' size='1.2rem').item-style 採用情報
-                    q-btn(flat to='#' size='1.2rem').item-style お問い合わせ
+                    router-link(to='/')
+                        q-btn(flat size='1.2rem').item-style ホーム
+                    router-link(to='/about')
+                        q-btn(flat size='1.2rem').item-style お知らせ
+                    q-btn(flat size='1.2rem').item-style 会社概要
+                    q-btn(flat size='1.2rem').item-style 事業内容
+                    q-btn(flat size='1.2rem').item-style 採用情報
+                    q-btn(flat size='1.2rem').item-style お問い合わせ
 
 </template>
 
@@ -38,4 +40,8 @@ export default class Header extends Vue {
     margin-left auto
 .item-style
     height: 100%
+a
+    color #ffffff
+    &.router-link-exact-active
+        color #70C8E4
 </style>
