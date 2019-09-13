@@ -3,8 +3,8 @@
     q-layout(view='hhh lpR fFf')
         Header
         .main-content
-            .spacer
-        router-view
+            .spacer-1
+            router-view
 
 </template>
 
@@ -23,8 +23,8 @@ export default class App extends Vue {}
 </script>
 
 <style lang="stylus">
-.spacer
-    height 80px
+.spacer-1
+    height 70px
 .main-content
     max-width 1000px
     margin 0 auto

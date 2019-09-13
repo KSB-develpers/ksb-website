@@ -4,7 +4,7 @@ import './styles/quasar.styl'
 import '@quasar/extras/material-icons/material-icons.css'
 import '@quasar/extras/fontawesome-v5/fontawesome-v5.css'
 import {
-  Quasar, 
+  Quasar,
   QLayout,
   QHeader,
   QDrawer,
@@ -18,6 +18,9 @@ import {
   QItem,
   QItemSection,
   QItemLabel,
+  QCarousel,
+  QCarouselSlide,
+  QCarouselControl,
 } from 'quasar'
 
 Vue.use(Quasar, {
@@ -36,6 +39,9 @@ Vue.use(Quasar, {
     QItem,
     QItemSection,
     QItemLabel,
+    QCarousel,
+    QCarouselSlide,
+    QCarouselControl,
   },
   directives: {
   },
