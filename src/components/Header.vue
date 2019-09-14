@@ -14,7 +14,8 @@
                     q-btn(flat size='1.2rem').item-style 会社概要
                     q-btn(flat size='1.2rem').item-style 事業内容
                     q-btn(flat size='1.2rem').item-style 採用情報
-                    q-btn(flat size='1.2rem').item-style お問い合わせ
+                    router-link(to='/contact')
+                        q-btn(flat size='1.2rem').item-style お問い合わせ
 
 </template>
 
