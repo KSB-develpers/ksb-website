@@ -27,6 +27,8 @@ export default class App extends Vue {}
     font-family Arial, Helvetica, sans-serif
 .spacer-1
     height 70px
+.space-wide
+    height 100px
 .main-content
     max-width 1024px
     margin 0 auto

@@ -1,4 +1,8 @@
 <template lang="pug">
+#Contact
+    .space-wide
+    p.heading
+        span.under お問い合わせ
 </template>
 
 <script lang="ts">
