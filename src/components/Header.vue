@@ -1,5 +1,6 @@
 <template lang="pug">
 #header
+    //- ヘッダーの実装部分
     q-header(reveal :reveal-offset="500")
         .navbar-parent
             .navbar
@@ -26,22 +27,24 @@ export default class Header extends Vue {
 }
 </script>
 
-<style lang="stylus">
-.navbar-parent
-    max-width 100%
-    height 70px
-    background-color #141C64
-.navbar
-    max-width 1000px
-    height  100%
-    margin 0 auto
-    display flex
-.nav-item
-    margin-left auto
-.item-style
-    height: 100%
-a
-    color #ffffff
-    &.router-link-exact-active
-        color #70C8E4
+<style scoped lang="stylus">
+#header
+    font-weight bold
+    .navbar-parent
+        max-width 100%
+        height 70px
+        background-color #141C64
+        // background linear-gradient(90deg, #70C8E4, #141C64) グラデーションのヘッダー
+    .navbar
+        max-width 1024px
+        height  100%
+        margin 0 auto
+        display flex
+    .nav-item
+        margin-left auto
+    .item-style
+        height: 100%
+    a
+        color #ffffff
+        font-weight bold
 </style>

@@ -1,10 +1,15 @@
 <template lang="pug">
 #homepage
-    q-carousel(animated v-model='slide' arrows navigation infinite :autoplay='5000' swipeable height='40rem' transition-next='slide-left')
+    //- 画像スライドショーの実装部分
+    q-carousel(animated v-model='slide' navigation infinite :autoplay='5000' swipeable transition-next='slide-left' height='500px')
         q-carousel-slide(:name='1' img-src='https://cdn.quasar.dev/img/mountains.jpg')
         q-carousel-slide(:name='2' img-src='https://cdn.quasar.dev/img/mountains.jpg')
         q-carousel-slide(:name='3' img-src='https://cdn.quasar.dev/img/mountains.jpg')
         q-carousel-slide(:name='4' img-src='https://cdn.quasar.dev/img/mountains.jpg')
+    .space-wide
+    p.heading
+        span.under お知らせ
+
 
 </template>
 
@@ -19,6 +24,7 @@ export default class Homepage extends Vue {
 }
 </script>
 
-<style lang="stylus">
-
+<style scoped lang="stylus">
+.space-wide
+    height 100px
 </style>
