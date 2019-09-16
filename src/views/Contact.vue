@@ -9,7 +9,7 @@
             .space
             q-form
                 p.form-caption お名前
-                q-input(v-model='userName' label='例: 山田太郎' hint='Name' outlined)
+                q-input(v-model='userName' label='例: 山田太郎' hint='Name' outlined :rules='[val => val && val.length > 0 || "名前を記入して下さい"]')
                 p.form-caption メールアドレス
                 q-input(v-model='userMail' label='例: example@mail.com' type='email' hint='Email' outlined)
                 p.form-caption 電話番号
@@ -40,12 +40,6 @@ export default class Contact extends Vue {
 </script>
 
 <style scoped lang="stylus">
-// @media (max-width $breakpoint-xs-max)
-//     .form-caption
-//         10px
-</style>
-
-<style scoped lang="stylus">
 .space
     height 50px
 .form-area
@@ -57,6 +51,14 @@ export default class Contact extends Vue {
     margin 0 auto
 .form-caption
     font-size 1.3em
-    margin 20px 0 0 0
+    margin 20px 0 10px 0
     font-weight bold
+
+@media screen and (max-width: 420px)
+    .form-area
+        max-width 90%
+        margin 0 auto
+        border-radius 10px
+    .form-child
+        max-width 80%
 </style>
