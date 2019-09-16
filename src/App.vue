@@ -25,6 +25,7 @@ export default class App extends Vue {}
 <style lang="stylus">
 #app
     font-family Arial, Helvetica, sans-serif
+    background-color #E0E0E0
 .spacer-1
     height 70px
 .space-wide

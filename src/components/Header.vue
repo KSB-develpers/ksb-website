@@ -1,7 +1,7 @@
 <template lang="pug">
 #header
     //- ヘッダーの実装部分
-    q-header(reveal :reveal-offset="500")
+    q-header(reveal :reveal-offset="100")
         .navbar-parent
             .navbar
                 router-link(to='/' tag='a')

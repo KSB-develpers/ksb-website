@@ -2,7 +2,7 @@ import Vue from 'vue';
 import Router from 'vue-router';
 import Homepage from './views/Homepage.vue';
 import About from './views/About.vue';
-import Contactform from './views/ContactParent.vue';
+import Contactform from './views/Contact.vue';
 
 Vue.use(Router);
 
