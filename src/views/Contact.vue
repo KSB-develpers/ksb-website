@@ -3,10 +3,10 @@
     .space-wide
     p.heading
         span.under お問い合わせ
-    .space
+    .space-small
     .form-area
         .form-child
-            .space
+            .space-small
             q-form
                 p.form-caption お名前
                 q-input(v-model='userName' label='例: 山田太郎' hint='Name' outlined :rules='[val => val && val.length > 0 || "名前を記入して下さい"]')
@@ -18,10 +18,10 @@
                 q-select(v-model='contactType' :options='contactTypes' outlined)
                 p.form-caption お問い合わせ内容
                 q-input(type='textarea' outlined)
-            .space
+            .space-small
             .column
                 q-btn.self-center(flat color='white' size='1.3em' style='background: #141C64' label='内容を確認する')
-            .space
+            .space-small
     .space-wide
 </template>
 
@@ -40,8 +40,6 @@ export default class Contact extends Vue {
 </script>
 
 <style scoped lang="stylus">
-.space
-    height 50px
 .form-area
     max-width 1024px
     background-color white

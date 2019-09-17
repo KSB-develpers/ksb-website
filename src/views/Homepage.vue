@@ -9,6 +9,11 @@
     .space-wide
     p.heading
         span.under お知らせ
+    .space-small
+    .newsArea
+
+    .space-wide
+
 
 
 </template>
@@ -25,4 +30,8 @@ export default class Homepage extends Vue {
 </script>
 
 <style scoped lang="stylus">
+.newsArea
+    height 300px
+    width 100%
+    background-color #FFFFFF
 </style>

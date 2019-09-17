@@ -3,7 +3,7 @@
     q-layout(view='hhh lpR fFf')
         Header
         .main-content
-            .spacer-1
+            .space-header-size
             router-view
 
 </template>
@@ -26,10 +26,12 @@ export default class App extends Vue {}
 #app
     font-family Arial, Helvetica, sans-serif
     background-color #E0E0E0
-.spacer-1
+.space-header-size
     height 70px
 .space-wide
     height 100px
+.space-small
+    height 30px
 .main-content
     max-width 1024px
     margin 0 auto
