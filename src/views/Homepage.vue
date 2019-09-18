@@ -11,12 +11,10 @@
         span.under お知らせ
     .space-small
     .newsArea
-        //- TODO: function.phpを書き換えて最新の記事4件を取得出来るようにする。カスタムwp-jsonの取得また、カテゴリーを取れるようにする。
-        .newsList(v-for='post of ksbNews')
+        //- TODO: カスタムwp-jsonの取得また、カテゴリーを取れるようにする。
+        .newsList(v-for='post in ksbNews')
             a(:href='post.link') {{ post.title.rendered }}
-            p {{ post.date }}
-
-    .space-widh
+    .space-wide
 
 
 
@@ -31,28 +29,15 @@ import axios from 'axios';
 
 export default class Homepage extends Vue {
     private slide = 1;
-    // axiosで取得したデータを入れる配列
+    // axiosで取得したpostsデータを入れる配列
     private ksbNews = [];
-    // 写真等のメディアを入れる配列
-    private media = [];
-    // エラーを入れる配列
-    private error = [];
-    // wp-jsonのURL
-    private postURL: string = 'http://ksbnews.local/wp-json/wp/v2/posts/';
+    // axiosで取得したcategoriesデータを入れる配列
+    private categories = [];
+    // ドメインURL
+    private wpURL = 'http://ksbnews.local/';
 
-    private async getPosts() {
-        try {
-            await axios
-                .get(this.postURL)
-                .then((Response) => { this.ksbNews = Response.data; });
-        } catch (error) {
-            console.log('データ取得できませんでした。', error);
-        }
-    }
-
-    private created() {
-        this.getPosts();
-    }
+    // private created() {
+    // }
 
 }
 </script>
