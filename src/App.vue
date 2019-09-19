@@ -3,9 +3,8 @@
     q-layout(view='hhh lpR fFf')
         Header
         .main-content
-            .space-header-size
             router-view
-
+    .space-wide
 </template>
 
 <script lang="ts">

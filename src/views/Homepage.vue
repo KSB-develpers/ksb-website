@@ -7,11 +7,11 @@
         q-carousel-slide(:name='3' img-src='https://cdn.quasar.dev/img/mountains.jpg')
         q-carousel-slide(:name='4' img-src='https://cdn.quasar.dev/img/mountains.jpg')
     .space-wide
-    p.heading
-        span.under お知らせ
-    .space-small
-    .newsArea
-    .space-wide
+    //- p.heading
+    //-     span.under お知らせ
+    //- .space-small
+    //- .newsArea
+    //- .space-wide
     p.heading
         span.under KSB について知る
     .space-small
@@ -28,7 +28,6 @@
         .about-content
             img.caption-style(:src='recruit')
             q-btn.btn-style(outline color='blue-4') 採用情報
-    .space-wide
 
 
 </template>
@@ -60,36 +59,37 @@ export default class Homepage extends Vue {
 </script>
 
 <style scoped lang="stylus">
-.newsArea
-    height 300px
-    width 100%
-    background-color #FFFFFF
+// .newsArea
+//     height 300px
+//     width 100%
+//     background-color #FFFFFF
 .slide-style
     height 400px
 .about-parent
     width 100%
-    height 200px
     display flex
     flex-wrap wrap
+    justify-content center
 .about-content
     width 300px
+    margin 15px
+    display block
 .side-space
-    width 62px
     height 30px
 .caption-style
     width 100%
-    margin-bottom 20px
 .btn-style
     width 100%
     border-radius 10px
     height 70px
     font-size 15px
+    margin 15px 0 0 0
     font-weight bold
 
 @media screen and (max-width: 780px)
-    .about-parent
-        width 90%
-        margin 0 auto
-    .about-content
-        width 100%
+    // .about-parent
+    //     width 90%
+    //     margin 0 auto
+    // .about-content
+    //     width 100%
 </style>
