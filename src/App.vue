@@ -11,6 +11,7 @@
 <script lang="ts">
 import { Vue, Component } from 'vue-property-decorator';
 import Quasar from 'quasar';
+// import 'bulma/css/bulma.css';
 import Header from '@/components/Header.vue';
 
 @Component({

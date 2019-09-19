@@ -11,11 +11,24 @@
         span.under お知らせ
     .space-small
     .newsArea
-        //- TODO: カスタムwp-jsonの取得また、カテゴリーを取れるようにする。
-        .newsList(v-for='post in ksbNews')
-            a(:href='post.link') {{ post.title.rendered }}
     .space-wide
-
+    p.heading
+        span.under KSB について知る
+    .space-small
+    .about-parent
+        .about-content
+            img.caption-style(:src='companyOverview')
+            router-link(to='/about')
+                q-btn.btn-style(outline color='blue-4') 会社概要
+        .side-space
+        .about-content
+            img.caption-style(:src='business')
+            q-btn.btn-style(outline color='blue-4') 事業内容
+        .side-space
+        .about-content
+            img.caption-style(:src='recruit')
+            q-btn.btn-style(outline color='blue-4') 採用情報
+    .space-wide
 
 
 </template>
@@ -35,6 +48,10 @@ export default class Homepage extends Vue {
     private categories = [];
     // ドメインURL
     private wpURL = 'http://ksbnews.local/';
+    // 画像インポート
+    private companyOverview = require('@/assets/sendai.jpeg');
+    private business = require('@/assets/work.jpg');
+    private recruit = require('@/assets/recruit.jpg');
 
     // private created() {
     // }
@@ -47,4 +64,32 @@ export default class Homepage extends Vue {
     height 300px
     width 100%
     background-color #FFFFFF
+.slide-style
+    height 400px
+.about-parent
+    width 100%
+    height 200px
+    display flex
+    flex-wrap wrap
+.about-content
+    width 300px
+.side-space
+    width 62px
+    height 30px
+.caption-style
+    width 100%
+    margin-bottom 20px
+.btn-style
+    width 100%
+    border-radius 10px
+    height 70px
+    font-size 15px
+    font-weight bold
+
+@media screen and (max-width: 780px)
+    .about-parent
+        width 90%
+        margin 0 auto
+    .about-content
+        width 100%
 </style>
