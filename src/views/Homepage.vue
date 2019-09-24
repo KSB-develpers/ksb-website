@@ -63,6 +63,9 @@ export default class Homepage extends Vue {
 //     height 300px
 //     width 100%
 //     background-color #FFFFFF
+#Homepage
+    max-width 1024px
+    margin 0 auto
 .slide-style
     height 400px
 .about-parent
@@ -78,6 +81,10 @@ export default class Homepage extends Vue {
     height 30px
 .caption-style
     width 100%
+    transition-duration 500ms
+.caption-style:hover
+    transform scale(0.9, 0.9)
+    border-radius 10px
 .btn-style
     width 100%
     border-radius 10px

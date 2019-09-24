@@ -33,7 +33,6 @@ export default class App extends Vue {}
 .space-small
     height 30px
 .main-content
-    max-width 1024px
     margin 0 auto
 .heading
     font-size 2.5rem
@@ -41,4 +40,9 @@ export default class App extends Vue {}
     text-align center
 .under
     border-bottom solid 4px #141C64
+.heading-text
+    color #FFFFFF
+    font-size 5em
+    background #141C64
+    padding 0.2em
 </style>

@@ -1,5 +1,6 @@
 <template lang="pug">
 #header
+    //- モバイル用のメニュー画面
     .mobile-menu(v-if='menuStatus')
         q-toolbar
             q-space/
@@ -7,17 +8,17 @@
         p.floating-menu-title - Menu -
         .floating-menu
             router-link(to='/')
-                .menu-panel
-                    p ホーム
+                .menu-panel(@click='menuActive')
+                    a ホーム
             router-link(to='/about')
-                .menu-panel
-                    p 会社概要
-            .menu-panel
-                p 事業内容
-            .menu-panel
-                p 採用情報
-            .menu-panel
-                p お問い合わせ
+                .menu-panel(@click='menuActive')
+                    a 会社概要
+            .menu-panel(@click='menuActive')
+                a 事業内容
+            .menu-panel(@click='menuActive')
+                a 採用情報
+            .menu-panel(@click='menuActive')
+                a お問い合わせ
         .floating-logo
             img(:src="headerLogo" height=90 width=150)
     //- ヘッダーの実装部分
@@ -26,25 +27,27 @@
             .navbar-parent
                 .navbar
                     router-link(to='/' tag='a')
-                        img(:src="headerLogo" height=60 width=100)
+                        img.logo(:src="headerLogo" height=60 width=100)
                     .nav-item
                         router-link(to='/')
                             q-btn(flat size='1.2rem').item-style ホーム
                         //- q-btn(flat size='1.2rem').item-style お知らせ
                         router-link(to='/about')
                             q-btn(flat size='1.2rem').item-style 会社概要
-                        q-btn(flat size='1.2rem').item-style 事業内容
-                        q-btn(flat size='1.2rem').item-style 採用情報
+                        router-link(to='/about')
+                            q-btn(flat size='1.2rem').item-style 事業内容
+                        router-link(to='/about')
+                            q-btn(flat size='1.2rem').item-style 採用情報
                         router-link(to='/contact')
                             q-btn(flat size='1.2rem').item-style お問い合わせ
     .mobile-header
         q-header(reveal :reveal-offset="100")
             .mobile-navbar-parent
-                q-toolbar
+                q-toolbar.toolbar-height
                     router-link(to='/')
-                        img.mobile-logo(:src="headerLogo")
+                        img(:src="headerLogo" height=50 width=100)
                     q-space/
-                    q-btn.mobile-btn(dense flat round icon='menu' @click='menuActive')
+                    q-btn.mobile-btn(dense flat round icon='menu' color='indigo-10' @click='menuActive')
 
 </template>
 
@@ -67,8 +70,11 @@ export default class Header extends Vue {
 .navbar-parent
     max-width 100%
     height 70px
-    background-color #141C64
-    // background linear-gradient(90deg, #70C8E4, #141C64) グラデーションのヘッダー
+    background-color #FFFFFF
+    border-bottom 3px solid #70C8E4
+    // background linear-gradient(90deg, #70C8E4, #141C64) //グラデーションのヘッダー
+.desktop-header
+    height 70px
 .navbar
     max-width 1024px
     height  100%
@@ -78,9 +84,13 @@ export default class Header extends Vue {
     margin-left auto
 .item-style
     height: 100%
-a
-    color #ffffff
     font-weight bold
+.logo
+    padding-top 5px
+a
+    color #141C64
+.toolbar-height
+    height 70px
 .mobile-header
     display none
 .mobile-menu
@@ -90,14 +100,14 @@ a
         display none
     .mobile-header
         display block
+        height 70px
     .mobile-navbar-parent
         max-width 100%
-        height 50px
-        background-color #141C64
+        height 70px
+        background-color #FFFFFF
+        border-bottom 3px solid #70C8E4
     .mobile-navbar
         max-width 100%
-    .mobile-logo
-        height 50px
     .mobile-menu
         display block
         position fixed
@@ -122,10 +132,10 @@ a
         font-size 20px
         border-top 1px dotted #E0E0E0
         border-bottom 1px dotted #E0E0E0
-        p
-            margin 0
-            color black
+    a
+        margin 0
+        color #141C64
+        text-decoration none
     .floating-logo
         text-align center
-
 </style>

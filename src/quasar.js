@@ -25,6 +25,7 @@ import {
   QSelect,
   QCarouselSlide,
   QCarouselControl,
+  QParallax,
 } from 'quasar'
 
 Vue.use(Quasar, {
@@ -50,6 +51,7 @@ Vue.use(Quasar, {
     QCarousel,
     QCarouselSlide,
     QCarouselControl,
+    QParallax,
   },
   directives: {
   },
