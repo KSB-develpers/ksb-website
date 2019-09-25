@@ -36,7 +36,7 @@
                             q-btn(flat size='1.2rem').item-style 会社概要
                         router-link(to='/about')
                             q-btn(flat size='1.2rem').item-style 事業内容
-                        router-link(to='/about')
+                        router-link(to='/philospphy')
                             q-btn(flat size='1.2rem').item-style 採用情報
                         router-link(to='/contact')
                             q-btn(flat size='1.2rem').item-style お問い合わせ

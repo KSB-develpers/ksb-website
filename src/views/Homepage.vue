@@ -12,24 +12,23 @@
     //- .space-small
     //- .newsArea
     //- .space-wide
-    p.heading
-        span.under KSB について知る
-    .space-small
-    .about-parent
-        .about-content
-            img.caption-style(:src='companyOverview')
-            router-link(to='/about')
-                q-btn.btn-style(outline color='blue-4') 会社概要
-        .side-space
-        .about-content
-            img.caption-style(:src='business')
-            q-btn.btn-style(outline color='blue-4') 事業内容
-        .side-space
-        .about-content
-            img.caption-style(:src='recruit')
-            q-btn.btn-style(outline color='blue-4') 採用情報
-
-
+    .contents-area
+        p.heading
+            span.under KSB について知る
+        .space-small
+        .about-parent
+            .about-content
+                img.caption-style(:src='companyOverview')
+                router-link(to='/about')
+                    q-btn.btn-style(outline color='blue-4') 会社概要
+            //- .side-space
+            .about-content
+                img.caption-style(:src='business')
+                q-btn.btn-style(outline color='blue-4') 事業内容
+            //- .side-space
+            .about-content
+                img.caption-style(:src='recruit')
+                q-btn.btn-style(outline color='blue-4') 採用情報
 </template>
 
 <script lang="ts">

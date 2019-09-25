@@ -24,7 +24,7 @@ export default class App extends Vue {}
 
 <style lang="stylus">
 #app
-    font-family Arial, Helvetica, sans-serif
+    font-family YuGothic, "ヒラギノ角ゴ ProN W3", "Lucida Grande", "Hiragino Kaku Gothic ProN", "メイリオ", Meiryo, Verdana, "ＭＳ Ｐゴシック", sans-serif
     background-color #E0E0E0
 .space-header-size
     height 70px
@@ -35,14 +35,21 @@ export default class App extends Vue {}
 .main-content
     margin 0 auto
 .heading
-    font-size 2.5rem
+    font-size 2em
     font-weight bold
     text-align center
 .under
     border-bottom solid 4px #141C64
 .heading-text
     color #FFFFFF
-    font-size 5em
+    font-size 3em
     background #141C64
+    font-weight bold
     padding 0.2em
+.contents-area
+    background-color #FFFFFF
+    border-radius 10px
+    height auto
+    padding 60px 0px 60px 0px
+    max-width 100%
 </style>
