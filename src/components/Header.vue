@@ -10,7 +10,7 @@
             router-link(to='/')
                 .menu-panel(@click='menuActive')
                     a ホーム
-            router-link(to='about/philosophy')
+            router-link(to='About')
                 .menu-panel(@click='menuActive')
                     a 会社概要
             .menu-panel(@click='menuActive')
