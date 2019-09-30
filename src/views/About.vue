@@ -4,9 +4,9 @@
         q-parallax(:src='keyVisual' :height='400')
             h1.heading-text 会社概要
     .sub-navbar
-        router-link.nav-text(to='' exact-active-class='active') 企業理念・経営理念
+        router-link.nev-text(to='/about' exact-active-class='active') 会社概要
+        router-link.nav-text(to='about/philosophy' exact-active-class='active') 企業理念・経営理念
         router-link.nev-text(to='/contact' exact-active-class='active') 代表メッセージ
-        p.nav-text 会社概要
     .space-wide
     .main-contents
         router-view/

@@ -17,18 +17,13 @@
             span.under KSB について知る
         .space-small
         .about-parent
-            .about-content
-                img.caption-style(:src='companyOverview')
-                router-link(to='/about')
-                    q-btn.btn-style(outline color='blue-4') 会社概要
-            //- .side-space
-            .about-content
-                img.caption-style(:src='business')
-                q-btn.btn-style(outline color='blue-4') 事業内容
-            //- .side-space
-            .about-content
-                img.caption-style(:src='recruit')
-                q-btn.btn-style(outline color='blue-4') 採用情報
+            q-card.my-card(v-for='item in abouts' dark :key='item.id')
+                router-link(:to='item.root')
+                    img.img-style(:src='item.img ')
+                q-card-actions
+                    router-link.btn-parent(:to='item.root')
+                        q-btn.btn-style(flat size='1.3em') {{ item.action }}
+
 </template>
 
 <script lang="ts">
@@ -51,6 +46,26 @@ export default class Homepage extends Vue {
     private business = require('@/assets/work.jpg');
     private recruit = require('@/assets/recruit.jpg');
 
+    private abouts = [
+        {
+            id: 1,
+            root: '/about',
+            img: this.companyOverview,
+            action: '会社概要',
+        },
+        {
+            id: 2,
+            root: '/about',
+            img: this.business,
+            action: '事業内容',
+        },
+        {
+            id: 3,
+            root: '/about',
+            img: this.recruit,
+            action: '採用情報',
+        },
+    ];
     // private created() {
     // }
 
@@ -72,26 +87,23 @@ export default class Homepage extends Vue {
     display flex
     flex-wrap wrap
     justify-content center
-.about-content
+.my-card
     width 300px
     margin 15px
+    background: #141C64
+.img-style
+    width 300px
+    transition transform 500ms
+.img-style:hover
+    transform scale(0.85, 0.85)
+.btn-parent
     display block
-.side-space
-    height 30px
-.caption-style
+    margin 0 auto
     width 100%
-    transition-duration 500ms
-.caption-style:hover
-    transform scale(0.9, 0.9)
-    border-radius 10px
 .btn-style
-    width 100%
-    border-radius 10px
-    height 70px
-    font-size 15px
-    margin 15px 0 0 0
     font-weight bold
-
+    width 100%
+    color #FFFFFF
 @media screen and (max-width: 780px)
     // .about-parent
     //     width 90%

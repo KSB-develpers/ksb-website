@@ -23,7 +23,7 @@ routes: [
         // childrenでは、上位ID('/about')が一致したときにrouter-viewで描画される。
         children: [
             {
-                path: '',
+                path: 'philosophy',
                 name: 'Philosophy',
                 component: Philosophy,
             },
