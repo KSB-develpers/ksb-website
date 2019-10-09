@@ -3,24 +3,30 @@
     .parallax-parent
         q-parallax(:src='keyVisual' :height='400')
             h1.heading-text 会社概要
-    .sub-navbar
-        router-link.nav-text(to='' exact-active-class='active') 企業理念・経営理念
-        router-link.nav-text(to='/' exact-active-class='active') 会社概要
-        router-link.nav-text(to='/contact' exact-active-class='active') 代表メッセージ
     .space-wide
     .main-contents
-        router-view/
-
+        Philosophy
+    .space-wide
+    .main-contents
+        Message
 </template>
 
 <script lang="ts">
 import { Vue, Component } from 'vue-property-decorator';
+import Philosophy from './Philosophy.vue';
+import Message from './Message.vue';
 
-@Component
+@Component({
+    components: {
+        Philosophy,
+        Message,
+    },
+})
 
 export default class About extends Vue {
     private keyVisual = require('@/assets/sendai-keyV.jpeg');
 }
+
 </script>
 
 <style lang="stylus" scoped>
